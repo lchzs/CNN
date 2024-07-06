@@ -40,12 +40,12 @@ transform = transforms.Compose([
         transforms.ToTensor()
 ])
 
-test_dataset = MyDataset("/home/yujint/rgb/videos", "test.csv", transform)
+test_dataset = MyDataset("/home/chenhuil/hkustgz-aiaa-5032-hw2-spring-2024/video_frames_30fpv_320p", "test_for_student.csv", transform)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
 # 加载模型
 net = ResNet18().to(device)
-net.load_state_dict(torch.load('/home/yujint/hw2/ResNet18_model_best.pth'))
+net.load_state_dict(torch.load('/home/chenhuil/hw/hw2/ResNet18_model_best.pth'))
 
 # 测试模型
 net.eval()
