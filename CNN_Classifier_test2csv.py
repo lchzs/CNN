@@ -45,7 +45,7 @@ test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
 # 加载模型
 net = ResNet18().to(device)
-net.load_state_dict(torch.load('/home/chenhuil/hw/hw2/ResNet18_model_best.pth'))
+net.load_state_dict(torch.load('/home/chenhuil/hw/hw2/VGG16_model_best.pth'))
 
 # 测试模型
 net.eval()
