@@ -44,7 +44,7 @@ transform = transforms.Compose([
         ])
 
 
-trainval_dataset = MyDataset("/home/chenhuil/hkustgz-aiaa-5032-hw2-spring-2024/video_frames_30fpv_320p", "/home/chenhuil/hkustgz-aiaa-5032-hw2-spring-2024/labels/trainval.csv", transform)
+trainval_dataset = MyDataset("/home/chenhuil/hkustgz-aiaa-5032-hw2-spring-2024/video_frames_30fpv_320p", "/home/chenhuil/hkustgz-aiaa-5032-hw2-spring-2024/trainval.csv", transform)
 train_data, val_data = train_test_split(trainval_dataset, test_size=0.2, random_state=0)
 
 train_loader = DataLoader(train_data, batch_size=32, shuffle=True)
