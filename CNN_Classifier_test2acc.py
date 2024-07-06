@@ -40,7 +40,7 @@ transform = transforms.Compose([
         transforms.ToTensor()
 ])
 
-test_dataset = MyDataset("/home/yujint/rgb/videos", "/mnt/hdd1/junweil/backup/11775/labels/test.csv", transform)
+test_dataset = MyDataset("/home/", "/home/chenhuil/hw/hw2/test_for_student.csv", transform)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
 # 加载模型
